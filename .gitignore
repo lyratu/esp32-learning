@@ -1,0 +1,68 @@
+# ============================================================
+# ESP32 学习项目 · .gitignore（macOS / Arduino / ESP-IDF / PlatformIO）
+# ============================================================
+
+# ---------- 1. macOS 系统垃圾 ----------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100/
+.Trashes/
+.fseventsd/
+__MACOSX/
+
+# ---------- 2. 编辑器与工具缓存 ----------
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.cache/
+.clangd/
+compile_commands.json
+
+# ---------- 3. 构建产物 ----------
+build/
+.pio/
+.pioenvs/
+.piolibdeps/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+managed_components/
+sdkconfig.old
+cmake-build-*/
+CMakeCache.txt
+
+# ---------- 4. 固件二进制 ----------
+*.bin
+*.elf
+*.map
+*.hex
+*.uf2
+*.dfa
+*.bak
+*.tmp
+
+# ---------- 5. 密钥与本地配置（最重要）----------
+secrets.h
+secret.h
+wifi_config.h
+credentials.h
+config_local.h
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.der
+# 示例模板要保留，方便别人（和未来的你）知道该填什么
+!secrets.example.h
+
+# ---------- 6. 日志与串口抓包 ----------
+*.log
+serial*.txt
+monitor*.txt
